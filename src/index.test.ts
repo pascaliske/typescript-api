@@ -2,7 +2,7 @@ import 'reflect-metadata'
 import test from 'ava'
 import * as supertest from 'supertest'
 import { Container } from 'typedi'
-import { useContainer as useContainerDatabase, createConnection } from 'typeorm'
+import { useContainer as useContainerDatabase, createConnection, ConnectionOptions } from 'typeorm'
 import { useContainer as useContainerRouting } from 'routing-controllers'
 import { useContainer as useContainerSocket } from 'socket-controllers'
 import { Server } from './server'
@@ -15,10 +15,17 @@ export async function factory(): Promise<supertest.SuperTest<supertest.Test>> {
     useContainerRouting(Container)
     useContainerSocket(Container)
 
-    const server = Container.get(Server)
+    const env = process.env.NODE_ENV || 'development'
+    const server: Server = Container.get(Server)
+    const options: ConnectionOptions = {
+        type: 'sqljs',
+        database: new Uint8Array(),
+        location: 'database',
+        logging: true,
+    }
 
-    await createConnection()
-    await server.prepare(process.env.NODE_ENV || 'development')
+    await createConnection(options)
+    await server.prepare(env)
 
     return supertest(server.App)
 }
