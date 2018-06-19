@@ -1,5 +1,7 @@
 # TypeScript API Skeleton
 
+[![Build Status](https://travis-ci.com/pascaliske/typescript-api.svg?branch=master)](https://travis-ci.com/pascaliske/typescript-api)
+
 ## Setup
 
 To install the skeleton use the following commands:
