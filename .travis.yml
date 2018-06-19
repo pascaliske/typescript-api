@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - '8'
+  - '9'
+  - '10'
+install:
+  - yarn install
+  - yarn run build
+script:
+  - yarn run lint
+  - yarn run test

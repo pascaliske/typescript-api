@@ -1,0 +1,17 @@
+# compiled output
+dist
+
+# orm config
+ormconfig.json
+
+# dependencies
+node_modules
+
+# misc
+typings
+npm-debug.log
+yarn-error.log
+
+# system files
+.DS_Store
+Thumbs.db
