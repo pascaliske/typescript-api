@@ -36,7 +36,3 @@ export async function factory(): Promise<supertest.SuperTest<supertest.Test>> {
 test.beforeEach(async () => {
     // setup test context
 })
-
-test('init', async t => {
-    t.pass()
-})

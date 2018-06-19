@@ -13,7 +13,7 @@
     "build": "tsc -p tsconfig.json",
     "watch": "nodemon --exec \"yarn run build && yarn run start\" --watch src --ext ts",
     "lint": "tslint -p tsconfig.json --fix",
-    "test": "ava dist/**/*.test.js",
+    "test": "ava dist/modules/*/*.test.js",
     "format": "prettier --write \"**/*.{ts,md}\"",
     "precommit": "lint-staged"
   },
