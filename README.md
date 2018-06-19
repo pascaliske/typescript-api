@@ -1,6 +1,6 @@
 # TypeScript API Skeleton
 
-[![Build Status](https://travis-ci.com/pascaliske/typescript-api.svg?branch=master)](https://travis-ci.com/pascaliske/typescript-api)
+[![Build Status](https://travis-ci.com/pascaliske/typescript-api.svg?branch=master)](https://travis-ci.com/pascaliske/typescript-api) [![Greenkeeper badge](https://badges.greenkeeper.io/pascaliske/typescript-api.svg)](https://greenkeeper.io/)
 
 ## Setup
 
