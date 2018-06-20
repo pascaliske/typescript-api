@@ -10,7 +10,7 @@ import { Server } from './server'
 /**
  * Mock database connection and prepare server.
  */
-export async function factory(): Promise<supertest.SuperTest<supertest.Test>> {
+export async function factory(data?: Uint8Array): Promise<supertest.SuperTest<supertest.Test>> {
     useContainerDatabase(Container)
     useContainerRouting(Container)
     useContainerSocket(Container)
@@ -19,7 +19,7 @@ export async function factory(): Promise<supertest.SuperTest<supertest.Test>> {
     const server: Server = Container.get(Server)
     const options: ConnectionOptions = {
         type: 'sqljs',
-        database: new Uint8Array(),
+        database: data || new Uint8Array(),
         location: 'database',
         logging: true,
     }
