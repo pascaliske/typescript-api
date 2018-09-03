@@ -8,6 +8,10 @@
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
         "tslint.autoFixOnSave": true,
+        "[yaml]": {
+            "editor.formatOnSave": false,
+            "editor.formatOnType": false
+        },
         "[json]": {
             "editor.formatOnSave": false,
             "editor.formatOnType": false
