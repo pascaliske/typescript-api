@@ -5,7 +5,7 @@ import { Container } from 'typedi'
 import { useContainer as useContainerDatabase, createConnection, ConnectionOptions } from 'typeorm'
 import { useContainer as useContainerRouting } from 'routing-controllers'
 import { useContainer as useContainerSocket } from 'socket-controllers'
-import { Server } from './server'
+import { Server } from '../server'
 
 /**
  * Mock database connection and prepare server.

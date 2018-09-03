@@ -1,5 +1,5 @@
 import test from 'ava'
-import { factory } from '../../test'
+import { factory } from '../../testing/setup'
 
 test('GET /', async t => {
     t.plan(2)
