@@ -1,24 +1,20 @@
 import { Interceptor, InterceptorInterface, Action } from 'routing-controllers'
+import { ApiResponse } from 'typings'
 
 @Interceptor()
 export class ResponseInterceptor implements InterceptorInterface {
     /**
-     * Standardizes all successful reponses to a pre defined format using status + result.
+     * Standardizes all successful responses to a pre defined format with status + data.
      *
      * @param {Action} action
-     * @param {any} data
+     * @param {ApiResponse} data
      * @returns {any}
      */
-    public intercept(action: Action, data: any): any {
+    public intercept(action: Action, data: ApiResponse): any {
         const status: number = action.response.statusCode
-        const skipFormat: boolean = data && data.skipFormat
 
-        if (status >= 200 && status < 300 && data && !skipFormat) {
+        if (status >= 200 && status < 300 && data) {
             return { status, data }
-        }
-
-        if (skipFormat) {
-            delete data.skipFormat
         }
 
         return data

@@ -5,7 +5,7 @@ import { Container } from 'typedi'
 import { useContainer as useContainerDatabase, createConnection, ConnectionOptions } from 'typeorm'
 import { useContainer as useContainerRouting } from 'routing-controllers'
 import { useContainer as useContainerSocket } from 'socket-controllers'
-import { Server } from '../server'
+import { Server, Environment } from '../server'
 
 /**
  * Mock database connection and prepare server.
@@ -15,7 +15,7 @@ export async function factory(data?: Uint8Array): Promise<supertest.SuperTest<su
     useContainerRouting(Container)
     useContainerSocket(Container)
 
-    const env = process.env.NODE_ENV || 'development'
+    const env: Environment = process.env.NODE_ENV as Environment
     const server: Server = Container.get(Server)
     const options: ConnectionOptions = {
         type: 'sqljs',
@@ -27,7 +27,7 @@ export async function factory(data?: Uint8Array): Promise<supertest.SuperTest<su
     await createConnection(options)
     await server.prepare(env)
 
-    return supertest(server.App)
+    return supertest(server.app)
 }
 
 /**

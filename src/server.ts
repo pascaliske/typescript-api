@@ -10,14 +10,27 @@ import * as morgan from 'morgan'
 import * as cors from 'cors'
 import { Logger, formatTime } from './services/logger'
 
+export enum Environment {
+    DEVELOPMENT = 'development',
+    PRODUCTION = 'production',
+}
+
 @Service()
 export class Server {
+    /**
+     * Express server instance.
+     *
+     * @param {express.Application} app
+     */
+    public app: express.Application
+
     /**
      * Logger service.
      *
      * @param {Logger} logger
      */
-    @Inject() private logger: Logger
+    @Inject()
+    private logger: Logger
 
     /**
      * Application environment
@@ -25,13 +38,6 @@ export class Server {
      * @param {string}
      */
     private env: string
-
-    /**
-     * Express server instance.
-     *
-     * @param {express.Application} app
-     */
-    private app: express.Application
 
     /**
      * Server instance.
@@ -53,15 +59,16 @@ export class Server {
      * @param {cors.CorsOptions} corsOptions
      */
     private corsOptions: cors.CorsOptions = {
-        origin: ['http://localhost:4200', 'https://travelfeed.blog'],
+        origin: [],
     }
 
     /**
      * Configures the express server instance.
      *
+     * @param {Environment} env
      * @returns {Promise<void>}
      */
-    public async prepare(env: string): Promise<void> {
+    public async prepare(env: Environment = Environment.DEVELOPMENT): Promise<void> {
         this.env = env
         this.app = express()
         this.app.options('*', cors(this.corsOptions))
@@ -134,24 +141,16 @@ export class Server {
      * Starts listening on the given port.
      *
      * @param {number} port
+     * @param {string} host
      * @returns {Promise<void>}
      */
-    public async listen(port: number): Promise<void> {
+    public async listen(port: number = 3000, host: string = 'localhost'): Promise<void> {
         this.server.listen(port)
         this.server.on('close', () => this.logger.info('closed successfully. bye!'))
         this.server.on('error', error => {
             throw new Error(error.message)
         })
 
-        this.logger.info(`server is listening in ${this.env} mode on port {${port}}`)
-    }
-
-    /**
-     * Returns the express app. (Needed for testing!)
-     *
-     * @returns {express.Application}
-     */
-    public get App(): express.Application {
-        return this.app
+        this.logger.info(`{${this.env}} server listening at {http://${host}:${port}}.`)
     }
 }

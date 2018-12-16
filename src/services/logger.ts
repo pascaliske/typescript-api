@@ -3,6 +3,15 @@ import { createLogger, Logger as LoggerInstance, transports, format } from 'wins
 import { Format } from 'logform'
 import chalk from 'chalk'
 
+export enum LogLevel {
+    ERROR = 'error',
+    WARN = 'warn',
+    INFO = 'info',
+    VERBOSE = 'verbose',
+    DEBUG = 'debug',
+    SILLY = 'silly',
+}
+
 export interface LogMetadata {
     [key: string]: any
 }
@@ -26,7 +35,7 @@ export class Logger {
         const { Console } = transports
 
         this.winston = createLogger({
-            level: this.fetchVerbosity('info'),
+            level: this.fetchVerbosity(LogLevel.INFO),
             format: this.formatMessage(),
             transports: [new Console()],
         })
@@ -56,22 +65,11 @@ export class Logger {
         this.winston.silly(chalk.grey(message), metadata)
     }
 
-    private fetchVerbosity(defaultValue: string = 'info'): string {
+    private fetchVerbosity(defaultValue: LogLevel = LogLevel.INFO): string {
         const envValue: string = process.env.LOGLEVEL || ''
+        const allowed: string[] = ['verbose', 'debug', 'silly']
 
-        switch (envValue.toLowerCase()) {
-            case 'verbose':
-                return 'verbose'
-
-            case 'debug':
-                return 'debug'
-
-            case 'silly':
-                return 'silly'
-
-            default:
-                return defaultValue
-        }
+        return allowed.includes(envValue) ? envValue : defaultValue
     }
 
     private formatMessage(): Format {
