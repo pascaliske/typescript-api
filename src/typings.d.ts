@@ -1,1 +1,1 @@
-export type ApiResponse = { [key: string]: any } | any[] | string
+export type ApiResponse<T = any> = { [key: string]: T } | T[] | T

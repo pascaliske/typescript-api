@@ -6,7 +6,7 @@ import { ApiResponse } from 'typings'
 @JsonController('/status')
 export class UserController {
     @Get('/')
-    public async status(): Promise<ApiResponse> {
+    public async status(): Promise<ApiResponse<string>> {
         return 'success'
     }
 }
