@@ -1,6 +1,6 @@
 # TypeScript API Skeleton
 
-[![Build Status](https://travis-ci.com/pascaliske/typescript-api.svg?branch=master)](https://travis-ci.com/pascaliske/typescript-api) [![Greenkeeper badge](https://badges.greenkeeper.io/pascaliske/typescript-api.svg)](https://greenkeeper.io/)
+[![GitHub Tag](https://img.shields.io/github/tag/pascaliske/typescript-api.svg?style=flat-square)](https://github.com/pascaliske/typescript-api) [![Travis CI](https://img.shields.io/travis/com/pascaliske/typescript-api/master.svg?style=flat-square)](https://travis-ci.com/pascaliske/typescript-api) [![Greenkeeper](https://badges.greenkeeper.io/pascaliske/typescript-api.svg?style=flat-square)](https://greenkeeper.io) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
 
 ## Setup
 
@@ -39,46 +39,122 @@ You can write controllers the following way:
 
 ```typescript
 import { Service } from 'typedi'
-import { JsonController, Get } from 'routing-controllers'
+import { JsonController, Get, Param } from 'routing-controllers'
+import { Repository } from 'typeorm'
+import { InjectRepository } from 'typeorm-typedi-extensions'
+import { ApiResponse } from 'typings'
+import { User } from './models/user'
 
 /**
  * Creates the controller as an dependency injected service
  */
 @Service()
-@JsonController('/status')
+@JsonController('/user')
 export class UserController {
     /**
-     * Defines an endpoint for "GET /api/status"
+     * Model repositories
+     */
+    @InjectRepository(User) private userRepo: Repository<User>
+
+    /**
+     * Defines an endpoint for "GET /api/user"
      */
     @Get('/')
-    public async createUser() {
-        return 'success'
+    public async readAll(): Promise<ApiResponse<User[]>> {
+        return this.userRepo.find()
     }
+
+    /**
+     * Defines an endpoint for "GET /api/user/:id"
+     */
+    @Get('/:id')
+    public async readOne(@Param('id') id: number): Promise<ApiResponse<User>> {
+        return this.userRepo.findOne(id)
+    }
+}
+```
+
+### Models
+
+The corresponding model for the demo controller above:
+
+```typescript
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+
+@Entity()
+export class User {
+    /***** columns *****/
+
+    @PrimaryGeneratedColumn() public id: number
+
+    @Column({
+        unique: true,
+        nullable: false,
+    })
+    public email: string
+
+    @Column() public password: string
+
+    /***** relations *****/
 }
 ```
 
 ### Tests
 
-You can write controllers the following way:
+You can test you controllers the following way:
 
 ```typescript
 import test from 'ava'
-import { factory } from '../../index.test'
+import { factory } from '../../testing/setup'
 
-test('GET /', async t => {
-    // this one is important for usage with supertest
+test('GET /user', async t => {
+    // required for supertest, count of asserts inside this test
     t.plan(2)
 
     // creates a server instance for access with supertest lib
     const server = await factory()
-    const response = await server.get('/api/status')
+    const response = await server.get('/api/user')
 
     t.is(response.status, 200)
-    t.deepEqual(response.body, {
-        data: 'success',
-        status: 200,
-    })
+    t.is(response.body.status, 200)
 })
+```
+
+### Services
+
+You can create custom services the following way:
+
+```typescript
+import { Service } from 'typedi'
+
+@Service({
+    global: true,
+})
+export class CustomService {
+    public foo(bar: string): string {
+        return bar
+    }
+}
+```
+
+The service is then globally available as a singleton and can be injected into a controller:
+
+```typescript
+import { Service, Inject } from 'typedi'
+import { JsonController, Get } from 'routing-controllers'
+import { ApiResponse } from 'typings'
+import { CustomService } from '../../services/my-custom.service.ts'
+
+@Service()
+@JsonController('/user')
+export class UserController {
+    @Inject() private customService: CustomService
+
+    @Get('/demo')
+    public async demo(): Promise<ApiResponse<string>> {
+        return this.customService.foo('DEMO!')
+    }
+}
 ```
 
 ## License

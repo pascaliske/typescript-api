@@ -5,6 +5,11 @@
         }
     ],
     "settings": {
+        "cSpell.words": [
+            "middlewares",
+            "typedi",
+            "zerofy"
+        ],
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
         "tslint.autoFixOnSave": true,

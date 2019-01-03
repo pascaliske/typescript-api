@@ -3,7 +3,7 @@ import { Container } from 'typedi'
 import { useContainer as useContainerDatabase, createConnection } from 'typeorm'
 import { useContainer as useContainerRouting } from 'routing-controllers'
 import { useContainer as useContainerSocket } from 'socket-controllers'
-import { Server } from './server'
+import { Server, Environment } from './server'
 
 // enable di on 3rd party libraries
 useContainerDatabase(Container)
@@ -11,7 +11,7 @@ useContainerRouting(Container)
 useContainerSocket(Container)
 
 // fetch port and server instance
-const env = process.env.NODE_ENV || 'development'
+const env: Environment = process.env.NODE_ENV as Environment
 const port = parseInt(process.env.PORT, 10) || 3000
 const server = Container.get(Server)
 
