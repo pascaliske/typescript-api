@@ -3928,9 +3928,10 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-socket-controllers@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/socket-controllers/-/socket-controllers-0.0.3.tgz#727deafcc866e6999057db4495a46822c53cda2b"
+socket-controllers@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/socket-controllers/-/socket-controllers-0.0.4.tgz#c7f0ce7afa55f8a53e2bc62175b855bdc09177dd"
+  integrity sha512-erZ3TLdWLSa8i72hF2HoKceTYvAQbDZmy2Nf62YfvX4fcJ1GlAnicANWDrb0dPoozTMkuSoE+g3cm0ulc5QG5w==
   dependencies:
     class-transformer "^0.1.6"
     reflect-metadata "^0.1.10"
