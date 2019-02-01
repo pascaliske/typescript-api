@@ -15,7 +15,8 @@
     "lint": "tslint --project tsconfig.json --fix",
     "test": "yarn run build && ava dist/modules/*/*.test.js",
     "check": "snyk test && snyk monitor",
-    "format": "prettier --write \"**/*.{ts,md}\""
+    "format": "prettier --write \"**/*.{ts,md}\"",
+    "changelog": "standard-changelog --release-count 1"
   },
   "repository": {
     "url": "https://github.com/pascaliske/typescript-api.git",
@@ -65,6 +66,7 @@
     "rimraf": "^2.6.3",
     "snyk": "^1.124.0",
     "sql.js": "^0.5.0",
+    "standard-changelog": "^2.0.6",
     "supertest": "^3.4.2",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
