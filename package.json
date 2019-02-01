@@ -14,6 +14,7 @@
     "watch": "nodemon --exec \"yarn run build && yarn run start\" --watch src --ext ts",
     "lint": "tslint --project tsconfig.json --fix",
     "test": "yarn run build && ava dist/modules/*/*.test.js",
+    "check": "snyk test && snyk monitor",
     "format": "prettier --write \"**/*.{ts,md}\""
   },
   "repository": {
@@ -62,6 +63,7 @@
     "prettier": "^1.16.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^2.6.3",
+    "snyk": "^1.124.0",
     "sql.js": "^0.5.0",
     "supertest": "^3.4.2",
     "tslint": "^5.12.1",
