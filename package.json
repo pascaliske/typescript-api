@@ -24,22 +24,6 @@
     "url": "https://github.com/pascaliske/typescript-api/issues"
   },
   "private": true,
-  "husky": {
-    "hooks": {
-      "precommit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.md": [
-      "yarn run format",
-      "git add"
-    ],
-    "**/*.ts": [
-      "yarn run lint",
-      "yarn run format",
-      "git add"
-    ]
-  },
   "dependencies": {
     "compression": "^1.7.3",
     "config": "^3.0.1",
