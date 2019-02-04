@@ -14,7 +14,9 @@
     "watch": "nodemon --exec \"yarn run build && yarn run start\" --watch src --ext ts",
     "lint": "tslint --project tsconfig.json --fix",
     "test": "yarn run build && ava dist/modules/*/*.test.js",
-    "format": "prettier --write \"**/*.{ts,md}\""
+    "check": "snyk test && snyk monitor",
+    "format": "prettier --write \"**/*.{ts,md}\"",
+    "changelog": "standard-changelog --release-count 1"
   },
   "repository": {
     "url": "https://github.com/pascaliske/typescript-api.git",
@@ -24,22 +26,6 @@
     "url": "https://github.com/pascaliske/typescript-api/issues"
   },
   "private": true,
-  "husky": {
-    "hooks": {
-      "precommit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.md": [
-      "yarn run format",
-      "git add"
-    ],
-    "**/*.ts": [
-      "yarn run lint",
-      "yarn run format",
-      "git add"
-    ]
-  },
   "dependencies": {
     "compression": "^1.7.3",
     "config": "^3.0.1",
@@ -54,33 +40,37 @@
     "socket.io": "^2.2.0",
     "tslib": "^1.9.3",
     "typedi": "^0.8.0",
-    "typeorm": "^0.2.11",
+    "typeorm": "^0.2.12",
     "typeorm-routing-controllers-extensions": "^0.2.0",
-    "typeorm-typedi-extensions": "^0.2.1",
-    "winston": "^3.1.0"
+    "typeorm-typedi-extensions": "^0.2.3",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.5.0",
+    "@commitlint/config-conventional": "^7.5.0",
     "@types/body-parser": "^1.17.0",
     "@types/compression": "^0.0.36",
     "@types/config": "^0.0.34",
     "@types/cors": "^2.8.4",
-    "@types/express": "^4.16.0",
+    "@types/express": "^4.16.1",
     "@types/helmet": "^0.0.42",
     "@types/morgan": "^1.7.35",
-    "@types/node": "^10.12.18",
+    "@types/node": "^10.12.21",
     "@types/socket.io": "^2.1.2",
     "@types/supertest": "^2.0.7",
-    "ava": "^1.0.1",
+    "ava": "^1.2.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.1",
-    "prettier": "^1.15.3",
-    "reflect-metadata": "^0.1.12",
+    "prettier": "^1.16.3",
+    "reflect-metadata": "^0.1.13",
     "rimraf": "^2.6.3",
+    "snyk": "^1.124.0",
     "sql.js": "^0.5.0",
-    "supertest": "^3.3.0",
-    "tslint": "^5.12.0",
+    "standard-changelog": "^2.0.6",
+    "supertest": "^3.4.2",
+    "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
-    "typedoc": "^0.14.0",
-    "typescript": "^3.2.2"
+    "typedoc": "^0.14.2",
+    "typescript": "^3.3.1"
   }
 }

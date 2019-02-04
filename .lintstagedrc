@@ -1,0 +1,11 @@
+{
+  "**/*.md": [
+    "yarn run format",
+    "git add"
+  ],
+  "**/*.ts": [
+    "yarn run lint",
+    "yarn run format",
+    "git add"
+  ]
+}
