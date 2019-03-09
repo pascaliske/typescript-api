@@ -67,7 +67,7 @@
     "snyk": "^1.124.0",
     "sql.js": "^0.5.0",
     "standard-changelog": "^2.0.6",
-    "supertest": "^3.4.2",
+    "supertest": "^4.0.0",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "typedoc": "^0.14.2",
