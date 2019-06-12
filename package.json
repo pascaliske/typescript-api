@@ -28,7 +28,7 @@
   "private": true,
   "dependencies": {
     "compression": "^1.7.3",
-    "config": "^3.0.1",
+    "config": "^3.1.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "helmet": "^3.15.0",
