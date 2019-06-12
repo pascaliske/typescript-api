@@ -1,19 +1,16 @@
 language: node_js
 node_js:
+  - '12'
   - '11'
-  - '10'
-before_install: yarn global add greenkeeper-lockfile@1
 install:
-  - yarn install
+  - yarn install --frozen-lockfile
   - yarn run build
-before_script: greenkeeper-lockfile-update
 script:
   - yarn run lint
   - yarn run test
-after_script: greenkeeper-lockfile-upload
+  - yarn run check
 env:
   global:
-    - secure: H5MMcevhSWvOF9zHeoLMFigYNiTWLCHvENnCJVc+dN5/fZoaFBBeA9uh4J+5oInp1uyqvIe+q5kCz1NIUCwRpWi/IFjPHLLRkZYIHqPvWyw42xoi4OxWxHjbUzPvzgsFSDI+UUyDXk0kMVmBFyOjFh+G/ORa18dB8I+UmzKEfduhaQ0dSXA7R98Jj8NmUmWJ+3W54C37fR+MiO9GHBf/lGZkvdXZJmHYnAr0xep41KqAdh2BxgcpePoTqDr+iGJ+NejNZULKprGRwvxhBE8qBIzSmT0S50U10bQQ62DAi8HoJ/3WmRIdIDPc3IDnuAkpiPdlyfaboRrxUOaEu67bUJNbiNwwMCa+rpfo3BF3jOD5iCnExYzmX3QzTNR7u1XFmuWNjV2h5b5Rys8k+FYR6FNx/vUrY4279sEex5CRLaYjLGsTlUWg5UkeqL9dbMDigtS4cWh6tAcpK7eLSAg59Z2J9BcsQ8/kf+avtpXkYDJ6bURsgKsc1CRgP5LICM0VR6KXVlzCO9EocXYCGpsD0Ty19FtTnd9YaUsmyFWlnPBspHciGaIarmNDzdURYwfyuDNNUCcwlkJRhSqfVErC8mP7iccEHlpK20/oI6BfXOPiqbVuAsR7Ysrp0/q8A72xMA2CVQ7zIJhfHJlSBAPTDZTN6c1FsxVsX8/udCI1Zoc=
     - secure: bJq9pj5e3NUFY7KjoIVU4RuopeCBt8QFR/sSExvPWccCV1sTgu0GqXlOMPL8vDduXoKeMkqXHwVzwtjsYfsGIP02+yKfIB4vn9/T+Wq3XOKK1YIgcAJDAJb5PhgzRdCW3uiZs9zQ+IFKiDwgJg0GtaTlyE3OpsHiFgdGaJLXuOORlEPPpqhbLqWSW82kFLsRotPscXbscDGtJ7rTI1OlH7NIWN7JK4/4VPNGzhpMOCnInnU6xrmDWoV8m9xgsjOS2Jl15GKY8QK6SXpf/T0FUNwA2OOxCrV0yg5JC9B5WIfBsHHFFCcuW3QKisXipksK0LtgPxFt8BR3zv1T/1q2PhVn2MqUSg6Dtpqw4XSX24NEk4tLVqnaNLaIV6i9wVTf5f4LxYL8SmlfQRGZ8GULUPBjQEGEtXe9kOGfvF3F+mqQOCvXP+DZ1JXH6ZsfhKL82I+/vkIhBHi9HmHVuXpwTYrb4PYO1IKIbWnXn6Jb4k7fPmGYbFMSq3ABLpuG+Af3pnh0Apnbw2PHf7uTifLMaZ9ssPDKLJA/QnVcR4uyta9FfzfBRcqjl34wiPWo6VsQFQYaU3KCr47bDvykno+8UGDZtUb0taYmbBpPSFHqY4OLkT8wHCG717VIv4qCqU/CBBFVfHJ3z48+SRKqkEErtrxt+kiSX3dxvpq+k1+TcKM=
 notifications:
   slack:
