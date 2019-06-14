@@ -64,7 +64,7 @@
     "prettier": "^1.18.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^2.6.3",
-    "snyk": "^1.177.0",
+    "snyk": "^1.179.0",
     "sql.js": "^0.5.0",
     "standard-changelog": "^2.0.11",
     "supertest": "^4.0.2",
