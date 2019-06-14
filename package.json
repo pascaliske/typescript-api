@@ -38,7 +38,7 @@
     "routing-controllers": "^0.7.7",
     "socket-controllers": "^0.0.5",
     "socket.io": "^2.2.0",
-    "tslib": "^1.9.3",
+    "tslib": "^1.10.0",
     "typedi": "^0.8.0",
     "typeorm": "^0.2.18",
     "typeorm-routing-controllers-extensions": "^0.2.0",
