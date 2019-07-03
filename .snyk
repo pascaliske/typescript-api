@@ -8,13 +8,13 @@ ignore:
         expires: '2019-03-03T21:57:58.354Z'
       chownr:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - chownr:
         reason: None given
         expires: '2019-03-03T21:57:58.354Z'
       node-pre-gyp > tar > chownr:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - node-pre-gyp > tar > chownr:
         reason: None given
         expires: '2019-03-03T21:57:58.354Z'
@@ -30,6 +30,12 @@ ignore:
     - chownr:
         reason: None given
         expires: '2019-07-12T07:54:36.893Z'
+    - chownr:
+        reason: None given
+        expires: '2019-07-24T12:14:16.279Z'
+    - node-pre-gyp > tar > chownr:
+        reason: None given
+        expires: '2019-07-24T12:14:16.279Z'
   'npm:mem:20180117':
     - typeorm > cli-highlight > yargs > os-locale > mem:
         reason: None given
@@ -37,7 +43,7 @@ ignore:
   'npm:validator:20180218':
     - routing-controllers > class-validator > validator:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
   SNYK-JS-JSYAML-173999:
     - '@commitlint/cli > @commitlint/load > cosmiconfig > js-yaml':
         reason: None given
@@ -1230,102 +1236,106 @@ ignore:
   SNYK-JS-MIXINDEEP-450212:
     - nodemon > chokidar > braces > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.277Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.084Z'
   SNYK-JS-SETVALUE-450213:
     - nodemon > chokidar > braces > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.084Z'
     - nodemon > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.278Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
     - nodemon > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2019-07-24T12:14:16.279Z'
+        expires: '2019-08-02T09:00:09.085Z'
+  SNYK-JS-LODASH-450202:
+    - winston > async > lodash:
+        reason: None given
+        expires: '2019-08-02T09:00:09.085Z'
 patch: {}
