@@ -705,10 +705,10 @@
   dependencies:
     "@types/express" "*"
 
-"@types/node@*", "@types/node@^12.0.2", "@types/node@^12.11.6":
-  version "12.11.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.6.tgz#2f8d551aef252de78f42acdccd53f5a8ce0cac4d"
-  integrity sha512-4uPUyY1Aofo1YzoypalYHNd2SnKYxH2b6LzXwpryZCJKA2XlagZSynXx5C8sfPH0r1cSltUpaVHV2q5sYXschQ==
+"@types/node@*", "@types/node@^12.0.2", "@types/node@^12.11.7":
+  version "12.11.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.7.tgz#57682a9771a3f7b09c2497f28129a0462966524a"
+  integrity sha512-JNbGaHFCLwgHn/iCckiGSOZ1XYHsKFwREtzPwSGCVld1SGhOlmZw2D4ZI94HQCrBHbADzW9m4LER/8olJTRGHA==
 
 "@types/node@^6.14.4":
   version "6.14.7"
@@ -1586,6 +1586,11 @@ cli-highlight@^2.0.0:
     parse5 "^4.0.0"
     yargs "^13.0.0"
 
+cli-spinner@0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/cli-spinner/-/cli-spinner-0.2.10.tgz#f7d617a36f5c47a7bc6353c697fc9338ff782a47"
+  integrity sha512-U0sSQ+JJvSLi1pAYuJykwiA8Dsr15uHEy85iCJ6A+0DjVxivr3d+N2Wjvodeg89uP5K6TswFkKBfAD7B3YSn/Q==
+
 cli-spinners@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-2.1.0.tgz#22c34b4d51f573240885b201efda4e4ec9fff3c7"
@@ -1793,10 +1798,10 @@ concordance@^4.0.0:
     semver "^5.5.1"
     well-known-symbols "^2.0.0"
 
-config@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/config/-/config-3.2.3.tgz#147a30f9eb235ecc46516f767e211335dbcbf3cc"
-  integrity sha512-pditxQzO+SkKX/2gs99YnUGEjmBVkTj2o/hGOgC0oYEU7QgLnVVDYmcSL6HiGels/8QtFJpFzi5iKYv4D0dalg==
+config@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/config/-/config-3.2.4.tgz#e60a908582991e800852f9cb60fcf424f3274a6c"
+  integrity sha512-H1XIGfnU1EAkfjSLn9ZvYDRx9lOezDViuzLDgiJ/lMeqjYe3q6iQfpcLt2NInckJgpAeekbNhQkmnnbdEDs9rw==
   dependencies:
     json5 "^1.0.1"
 
@@ -6132,10 +6137,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.238.0:
-  version "1.238.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.238.0.tgz#290ce8149095c0f9089e0e37c82879df0c425bb8"
-  integrity sha512-zUbfC0SEMdeEQNvCE8hosB8EQ4nN+f4EHX9ehCV6YcvbFEmRS8HK51XNuiKRpWUpzMwvV21Sm8SZXodmumwpKw==
+snyk@^1.239.0:
+  version "1.239.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.239.0.tgz#da59b847d115338c3d447baffd69b1e5b2b8e661"
+  integrity sha512-f6wGzYA/dZx4VfIJXz/W9taIVx9U3w1lVSDlBDq3TcoaBk9iLR3EMpAILHgNsroLCBk8ymDfzHisO00N7vB+UQ==
   dependencies:
     "@snyk/cli-interface" "2.2.0"
     "@snyk/dep-graph" "1.12.0"
@@ -6146,6 +6151,7 @@ snyk@^1.238.0:
     abbrev "^1.1.1"
     ansi-escapes "3.2.0"
     chalk "^2.4.2"
+    cli-spinner "0.2.10"
     configstore "^3.1.2"
     debug "^3.1.0"
     diff "^4.0.1"
