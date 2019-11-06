@@ -68,7 +68,7 @@
     "sql.js": "^1.0.1",
     "standard-changelog": "^2.0.15",
     "supertest": "^4.0.2",
-    "tslint": "^5.20.0",
+    "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.15.0",
     "typescript": "^3.7.2"
