@@ -65,7 +65,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "snyk": "^1.261.0",
-    "sql.js": "^1.0.1",
+    "sql.js": "^1.1.0",
     "standard-changelog": "^2.0.21",
     "supertest": "^4.0.2",
     "tslint": "^5.20.1",
