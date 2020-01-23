@@ -34,7 +34,7 @@
     "express": "^4.17.1",
     "helmet": "^3.21.2",
     "morgan": "^1.9.1",
-    "mysql": "^2.18.0",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.2",
     "routing-controllers": "^0.8.0",
     "socket-controllers": "^0.0.5",
