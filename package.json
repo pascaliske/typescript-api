@@ -59,7 +59,7 @@
     "@types/node": "^13.9.5",
     "@types/socket.io": "^2.1.4",
     "@types/supertest": "^2.0.8",
-    "ava": "^3.5.1",
+    "ava": "^3.5.2",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.10",
     "prettier": "^2.0.2",
