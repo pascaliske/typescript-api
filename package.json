@@ -71,7 +71,7 @@
     "supertest": "^4.0.2",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.17.3",
+    "typedoc": "^0.17.4",
     "typescript": "^3.8.3"
   }
 }
