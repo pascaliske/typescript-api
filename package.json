@@ -35,7 +35,7 @@
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.3",
-    "routing-controllers": "^0.8.0",
+    "routing-controllers": "^0.8.1",
     "socket-controllers": "^0.0.5",
     "socket.io": "^2.3.0",
     "tslib": "^1.11.1",
