@@ -13,7 +13,7 @@
     "build": "rimraf dist && tsc --project tsconfig.json",
     "watch": "nodemon --exec \"yarn run build && yarn run start\" --watch src --ext ts",
     "lint": "tslint --project tsconfig.json --fix",
-    "test": "yarn run build && ava dist/modules/*/*.test.js",
+    "test": "ava dist/modules/*/*.test.js",
     "format": "prettier --write \"**/*.{ts,md}\"",
     "changelog": "standard-changelog --release-count 1"
   },
