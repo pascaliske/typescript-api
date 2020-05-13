@@ -1,16 +1,12 @@
 language: node_js
 node_js:
-  - '12'
+  - '13'
 install:
   - yarn install --frozen-lockfile
-  - yarn run build
 script:
+  - yarn run build
   - yarn run lint
   - yarn run test
-  - yarn run check
-env:
-  global:
-    - secure: bJq9pj5e3NUFY7KjoIVU4RuopeCBt8QFR/sSExvPWccCV1sTgu0GqXlOMPL8vDduXoKeMkqXHwVzwtjsYfsGIP02+yKfIB4vn9/T+Wq3XOKK1YIgcAJDAJb5PhgzRdCW3uiZs9zQ+IFKiDwgJg0GtaTlyE3OpsHiFgdGaJLXuOORlEPPpqhbLqWSW82kFLsRotPscXbscDGtJ7rTI1OlH7NIWN7JK4/4VPNGzhpMOCnInnU6xrmDWoV8m9xgsjOS2Jl15GKY8QK6SXpf/T0FUNwA2OOxCrV0yg5JC9B5WIfBsHHFFCcuW3QKisXipksK0LtgPxFt8BR3zv1T/1q2PhVn2MqUSg6Dtpqw4XSX24NEk4tLVqnaNLaIV6i9wVTf5f4LxYL8SmlfQRGZ8GULUPBjQEGEtXe9kOGfvF3F+mqQOCvXP+DZ1JXH6ZsfhKL82I+/vkIhBHi9HmHVuXpwTYrb4PYO1IKIbWnXn6Jb4k7fPmGYbFMSq3ABLpuG+Af3pnh0Apnbw2PHf7uTifLMaZ9ssPDKLJA/QnVcR4uyta9FfzfBRcqjl34wiPWo6VsQFQYaU3KCr47bDvykno+8UGDZtUb0taYmbBpPSFHqY4OLkT8wHCG717VIv4qCqU/CBBFVfHJ3z48+SRKqkEErtrxt+kiSX3dxvpq+k1+TcKM=
 notifications:
   slack:
     rooms:
