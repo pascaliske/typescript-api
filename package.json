@@ -51,7 +51,7 @@
     "winston": "^3.3.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
     "@types/body-parser": "^1.19.0",
     "@types/compression": "^1.7.0",
@@ -64,6 +64,7 @@
     "@types/socket.io": "^2.1.8",
     "@types/supertest": "^2.0.9",
     "ava": "^3.8.2",
+    "chalk": "^4.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
