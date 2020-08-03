@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 import test from 'ava'
-import * as supertest from 'supertest'
+import supertest from 'supertest'
 import { Container } from 'typedi'
 import { useContainer as useContainerDatabase, createConnection, ConnectionOptions } from 'typeorm'
 import { useContainer as useContainerRouting } from 'routing-controllers'
