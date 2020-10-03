@@ -4352,10 +4352,10 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
-sql.js@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/sql.js/-/sql.js-1.3.0.tgz#b98c159535cf3e25551f28e98e4dc9cf5849cfc5"
-  integrity sha512-bxrJ/9rqJ2SA6hpHnSodRjKBugZHewRvNTITTt74W1VZWmzODjdS68yQW0/J9oC0NWKylHEtV1ptkoTyOYO4Tw==
+sql.js@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/sql.js/-/sql.js-1.3.1.tgz#e13225867d7586504e492c82150de4d7a733543c"
+  integrity sha512-/P+IoWMg9tEqvQeY9cY/mW7R9QkvB1u0LsFFZ4D5ihDHoSP3TVBd5oH/57Ft0yBIugBtSmaRPWSMcVUXgBezaQ==
 
 sqlstring@2.3.1:
   version "2.3.1"
