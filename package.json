@@ -33,7 +33,7 @@
     "class-transformer": "^0.3.1",
     "class-validator": "^0.12.2",
     "compression": "^1.7.4",
-    "config": "^3.3.4",
+    "config": "^3.3.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
