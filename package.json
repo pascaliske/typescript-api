@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-conventional": "^12.1.1",
     "@types/body-parser": "^1.19.0",
     "@types/compression": "^1.7.0",
     "@types/config": "^0.0.37",
