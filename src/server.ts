@@ -3,7 +3,7 @@ import { useExpressServer, Action } from 'routing-controllers'
 import { useSocketServer } from 'socket-controllers'
 import { createServer, Server as HttpServer } from 'http'
 import express from 'express'
-import io from 'socket.io'
+import io, { Server as SocketServer } from 'socket.io'
 import compression from 'compression'
 import helmet from 'helmet'
 import morgan from 'morgan'
@@ -95,8 +95,8 @@ export class Server {
         this.server = createServer(this.app)
 
         // init socket server
-        this.io = io(this.server, {
-            origins: 'localhost:*',
+        this.io = new SocketServer(this.server, {
+            cors: { origin: 'localhost:*' },
         })
         this.io.on('connect', (socket: io.Socket) => {
             this.logger.debug(`user connected (#${socket.id})`)
