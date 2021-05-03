@@ -25,10 +25,6 @@
     "url": "https://github.com/pascaliske/typescript-api/issues"
   },
   "private": true,
-  "resolutions": {
-    "@types/express": "4.17.11",
-    "@types/express-serve-static-core": "4.17.7"
-  },
   "dependencies": {
     "class-transformer": "^0.4.0",
     "class-validator": "^0.12.2",
