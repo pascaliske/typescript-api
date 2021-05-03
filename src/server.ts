@@ -2,12 +2,12 @@ import { Service, Inject } from 'typedi'
 import { useExpressServer, Action } from 'routing-controllers'
 import { useSocketServer } from 'socket-controllers'
 import { createServer, Server as HttpServer } from 'http'
-import * as express from 'express'
-import * as io from 'socket.io'
-import * as compression from 'compression'
-import * as helmet from 'helmet'
-import * as morgan from 'morgan'
-import * as cors from 'cors'
+import express from 'express'
+import io, { Server as SocketServer } from 'socket.io'
+import compression from 'compression'
+import helmet from 'helmet'
+import morgan from 'morgan'
+import cors from 'cors'
 import { Logger, formatTime } from './services/logger'
 
 export enum Environment {
@@ -95,8 +95,8 @@ export class Server {
         this.server = createServer(this.app)
 
         // init socket server
-        this.io = io(this.server, {
-            origins: 'localhost:*',
+        this.io = new SocketServer(this.server, {
+            cors: { origin: 'localhost:*' },
         })
         this.io.on('connect', (socket: io.Socket) => {
             this.logger.debug(`user connected (#${socket.id})`)

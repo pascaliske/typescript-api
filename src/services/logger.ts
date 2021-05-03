@@ -1,7 +1,7 @@
 import { Service } from 'typedi'
 import { createLogger, Logger as LoggerInstance, transports, format } from 'winston'
 import { Format } from 'logform'
-import chalk from 'chalk'
+import { red, yellow, grey, cyan } from 'chalk'
 
 export enum LogLevel {
     ERROR = 'error',
@@ -42,11 +42,11 @@ export class Logger {
     }
 
     public error(message: string, metadata?: LogMetadata): void {
-        this.winston.error(chalk.red(message), metadata)
+        this.winston.error(red(message), metadata)
     }
 
     public warn(message: string, metadata?: LogMetadata): void {
-        this.winston.warn(chalk.yellow(message), metadata)
+        this.winston.warn(yellow(message), metadata)
     }
 
     public info(message: string, metadata?: LogMetadata): void {
@@ -54,15 +54,15 @@ export class Logger {
     }
 
     public verbose(message: string, metadata?: LogMetadata): void {
-        this.winston.verbose(chalk.grey(message), metadata)
+        this.winston.verbose(grey(message), metadata)
     }
 
     public debug(message: string, metadata?: LogMetadata): void {
-        this.winston.debug(chalk.grey(message), metadata)
+        this.winston.debug(grey(message), metadata)
     }
 
     public silly(message: string, metadata?: LogMetadata): void {
-        this.winston.silly(chalk.grey(message), metadata)
+        this.winston.silly(grey(message), metadata)
     }
 
     private fetchVerbosity(defaultValue: LogLevel = LogLevel.INFO): string {
@@ -95,7 +95,7 @@ export class Logger {
 
     private highlight(message: string): string {
         return message.replace(/\{.*?\}/g, matches => {
-            return chalk.cyan(matches.replace('{', '').replace('}', ''))
+            return cyan(matches.replace('{', '').replace('}', ''))
         })
     }
 }
