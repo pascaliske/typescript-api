@@ -7,9 +7,7 @@
 To install the skeleton use the following commands:
 
 ```bash
-$ mkdir -p my-api
-$ cd my-api
-$ git clone https://github.com/pascaliske/typescript-api.git .
+$ git clone https://github.com/pascaliske/typescript-api.git my-api
 $ yarn install
 ```
 
