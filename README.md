@@ -1,6 +1,6 @@
 # TypeScript API Skeleton
 
-[![GitHub Tag](https://img.shields.io/github/tag/pascaliske/typescript-api.svg?style=flat-square)](https://github.com/pascaliske/typescript-api) [![Travis CI](https://img.shields.io/travis/com/pascaliske/typescript-api/master.svg?style=flat-square)](https://travis-ci.com/pascaliske/typescript-api) [![Greenkeeper](https://badges.greenkeeper.io/pascaliske/typescript-api.svg?style=flat-square)](https://greenkeeper.io) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
+[![GitHub Tag](https://img.shields.io/github/tag/pascaliske/typescript-api.svg?style=flat-square)](https://github.com/pascaliske/typescript-api) [![Build Status](https://img.shields.io/github/workflow/status/pascaliske/typescript-api/Test%20package/master?label=test&style=flat-square)](https://github.com/pascaliske/typescript-api/actions) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=pascaliske/typescript-api)](https://dependabot.com) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
 
 ## Setup
 

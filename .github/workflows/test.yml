@@ -1,0 +1,21 @@
+name: Test package
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout
+      - uses: actions/checkout@v2
+
+      # prepare
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '15'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install --frozen-lockfile
+
+      # test
+      - run: yarn run build
+      - run: yarn run lint
+      - run: yarn run test
