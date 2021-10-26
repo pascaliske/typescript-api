@@ -40,7 +40,7 @@
     "socket-controllers": "^0.0.5",
     "socket.io": "^4.3.1",
     "tslib": "^2.3.1",
-    "typedi": "0.8.0",
+    "typedi": "0.10.0",
     "typeorm": "^0.2.38",
     "typeorm-routing-controllers-extensions": "^0.2.0",
     "typeorm-typedi-extensions": "^0.4.1",
