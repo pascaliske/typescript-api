@@ -1,0 +1,9 @@
+{
+  "**/*.md": [
+    "yarn run format"
+  ],
+  "**/*.ts": [
+    "yarn run lint",
+    "yarn run format"
+  ]
+}
