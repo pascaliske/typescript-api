@@ -41,7 +41,7 @@
     "socket.io": "^4.4.0",
     "tslib": "^2.3.1",
     "typedi": "0.8.0",
-    "typeorm": "^0.2.40",
+    "typeorm": "^0.2.41",
     "typeorm-routing-controllers-extensions": "^0.2.0",
     "typeorm-typedi-extensions": "^0.4.1",
     "winston": "^3.3.3"
