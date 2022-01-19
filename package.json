@@ -68,7 +68,7 @@
     "rimraf": "^3.0.2",
     "sql.js": "^1.6.2",
     "standard-changelog": "^2.0.27",
-    "supertest": "^6.2.1",
+    "supertest": "^6.2.2",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.22.11",
