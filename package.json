@@ -47,7 +47,7 @@
     "winston": "^3.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.0.2",
+    "@commitlint/cli": "^16.0.3",
     "@commitlint/config-conventional": "^16.0.0",
     "@types/body-parser": "^1.19.2",
     "@types/compression": "^1.7.2",
