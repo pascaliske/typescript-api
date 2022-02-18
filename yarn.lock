@@ -4909,10 +4909,10 @@ typeorm-typedi-extensions@^0.4.1:
   resolved "https://registry.yarnpkg.com/typeorm-typedi-extensions/-/typeorm-typedi-extensions-0.4.1.tgz#e62e3c8f30021c9b8f258e068d38723dbd64de1d"
   integrity sha512-05hWktQ4zuXzTTUO3ao56yOezlvUuZhH2NRS//m0SOGCAJoVlfPTMHcmDaMSQy/lMfAwPWoIyn+sfK7ONzTdXQ==
 
-typeorm@^0.2.42:
-  version "0.2.42"
-  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.42.tgz#15f9aa62a06deb370f5b2481720d85a7eef002c2"
-  integrity sha512-vuw1zOhwQFbjy/I3gV2oEzQZrRQ2MlkSx3sARqwOPWTF3Za0k0a1m6arMigPZ/l6TtsQsFzFQ2ozZtK6h64IxQ==
+typeorm@^0.2.43:
+  version "0.2.43"
+  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.43.tgz#110d629ed5d0b014c735f0213f06b34abb32d298"
+  integrity sha512-j4SU8I0PsMWtF64s/9tOJmlexzfDsvXhTjSE2GXdSseUN8TYyfbCm/fJnC6lx3uHgBJL4z9bE8U/7qyC/FVmNw==
   dependencies:
     "@sqltools/formatter" "^1.2.2"
     app-root-path "^3.0.0"
