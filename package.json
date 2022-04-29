@@ -35,7 +35,7 @@
     "helmet": "^5.0.2",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.16",
     "routing-controllers": "^0.9.0",
     "socket-controllers": "^0.0.5",
     "socket.io": "^4.5.0",
